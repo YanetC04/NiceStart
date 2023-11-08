@@ -6,6 +6,11 @@
     <style name="Theme.Primero.Dark.ActionBar" parent="Theme.Material3.Dark">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- color Primario-->
+        <item name="colorPrimary">@color/fucsia_200</item>
+
+        <!-- color Secundario-->
+        <item name="colorSecondary">@color/fucsia_200</item>
     </style>
 
 

@@ -10,3 +10,8 @@ las interaciones entre el Main. Registro solo retorna a Login. Main solo
 tendra estilos y temas. Tanto Main y Register tendran la barra pero
 Login no
 ## Lanzamiento []()
+La app se ve de la siguiente manera:
+Login lanza a Signup (Register)y al Main
+Mi Signup 
+![Login2_activity](app/img/Register.PNG)
+Mi Main
