@@ -13,6 +13,7 @@ Login no
 La app se ve de la siguiente manera:
 Login lanza a Signup (Register)y al Main
 Mi Signup 
+
 ![Login2_activity](app/img/Register.PNG)
 
 Mi Main esta en Proceso de terminarlo una vez que se termine se insertara 
