@@ -10,34 +10,13 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="70dp"
+        android:layout_height="51dp"
         android:layout_marginTop="8dp"
-        app:srcCompat="@drawable/ic_launcher_foreground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/main"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:contextClickable="true"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:rotation="-8"
-        android:rotationX="10"
-        android:rotationY="9"
-        android:text="RConnect"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="15dp"
-        android:typeface="normal"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintVertical_bias="0.016" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
@@ -49,40 +28,200 @@
         app:layout_constraintGuide_percent="0.8029197"
         style="@style/buttonflat" />
 
+    <!--- android:scrollbars : hace que lo esconda-->
+
+    <TextView
+        android:id="@+id/primera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Resientes"
+        app:layout_constraintBottom_toTopOf="@id/scroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintVertical_bias="0.41" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/menu"
+        android:background="@color/black"
+        android:onClick="openMain"
+        app:layout_constraintBottom_toBottomOf="@id/primera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        />
+
     <HorizontalScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/linear1"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintVertical_bias="0.166"
+        tools:layout_editor_absoluteX="0dp"
+        android:scrollbars="none"
+        >
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:padding="16dp">
 
             <ImageView
                 android:id="@+id/img1"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
-                android:layout_marginBottom="468dp"
-                android:src="@drawable/mario_bros_png"
+                android:src="@drawable/a"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintHorizontal_bias="0.3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.152" />
 
             <ImageView
                 android:id="@+id/img2"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="20dp"
-                android:src="@drawable/yingchou_han_ijriecs3d4g_unsplash"
+                android:src="@drawable/e"
                 app:layout_constraintBottom_toBottomOf="@+id/img1"
-                app:layout_constraintStart_toEndOf="@+id/img1"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintStart_toEndOf="@+id/img1" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/b"
+                app:layout_constraintBottom_toBottomOf="@+id/img2"
+                app:layout_constraintStart_toEndOf="@+id/img2" />
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/c"
+                app:layout_constraintBottom_toBottomOf="@+id/img3"
+                app:layout_constraintStart_toEndOf="@+id/img3" />
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/d"
+                app:layout_constraintBottom_toBottomOf="@+id/img4"
+                app:layout_constraintStart_toEndOf="@+id/img4" />
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </HorizontalScrollView>
 
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/scroll">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/usuario1"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="24dp"
+                android:src="@drawable/d" />
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="76dp"
+                android:layout_weight="1"
+                android:text="Texto para Escribir"
+                android:textAlignment="center"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/like1"
+                android:layout_width="50dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:src="@drawable/corazon"
+                android:layout_margin="20dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            <ImageView
+                android:id="@+id/usuario2"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="24dp"
+                android:src="@drawable/a" />
+
+            <TextView
+                android:id="@+id/txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="76dp"
+                android:layout_weight="1"
+                android:text="Texto para Escribir"
+                android:textAlignment="center"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/like2"
+                android:layout_width="50dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:src="@drawable/corazon"
+                android:layout_margin="20dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            <ImageView
+                android:id="@+id/usuario3"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="24dp"
+                android:src="@drawable/b" />
+
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="76dp"
+                android:layout_weight="1"
+                android:text="Texto para Escribir"
+                android:textAlignment="center"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/like3"
+                android:layout_width="50dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:src="@drawable/corazon"
+                android:layout_margin="20dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
