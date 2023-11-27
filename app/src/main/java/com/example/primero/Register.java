@@ -24,7 +24,5 @@ public class Register extends AppCompatActivity {
                 .placeholder(new ColorDrawable(this.getResources().getColor(R.color.teal_200)))
                 .transition(DrawableTransitionOptions.withCrossFade(2000))
                 .into(mBoy);
-
-
     }
 }

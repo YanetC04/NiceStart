@@ -35,7 +35,8 @@
             android:theme="@style/Theme.Primero.Light.ActionBar" />
         <activity
             android:name=".Nopeople"
-            android:exported="false" >
+            android:exported="false"
+            >
         </activity>
     </application>
 

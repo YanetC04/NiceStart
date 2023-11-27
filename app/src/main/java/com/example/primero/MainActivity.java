@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.animation.Animator;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -14,17 +13,21 @@ import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
 
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       openApp();
-       seleccion(R.id.like1, R.id.usuario1, R.id.txt1, R.raw.hmm);
-    }
 
+    //  seleccion(R.id.like1, R.id.usuario1, R.id.txt1, R.raw.hmm);
+
+    }
+    private void openNopeople(){
+        Intent intent = new Intent(MainActivity.this, Nopeople.class);
+        startActivity(intent);
+    }
+/*
     private void seleccion(int i, int usId, int txtId, final int animacionId){
         final boolean[] like = {false};
         final LottieAnimationView likeaimagen = findViewById(i);
@@ -73,17 +76,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return !like;
     }
+*/
 
-    private void openApp(){
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(MainActivity.this, Nopeople.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
-            }
-        },5000);
-    }
 }

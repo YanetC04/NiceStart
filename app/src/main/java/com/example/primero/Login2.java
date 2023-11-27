@@ -31,16 +31,16 @@ public class Login2 extends AppCompatActivity {
                 .into(mGirl);
 
     }
-
-    public void openMain(View v){
+    public void openMain(View v) {
         Intent intent = new Intent(Login2.this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
+
     }
 
-    //Metodo para el boton de registro ( activar el boton)
-    public void openSignup(View v){
+    // Method for Signup button para que te lleve un boton a otro lugar
+    public void openSignup(View v) {
         Intent intent = new Intent(Login2.this, Register.class);
         startActivity(intent);
     }
