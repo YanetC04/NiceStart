@@ -3,6 +3,7 @@ package com.example.primero;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -15,6 +16,7 @@ public class Nopeople extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nopeople);
+
 
         //La vista dentro es un webview
         miVisorWeb = (WebView) findViewById(R.id.vistaweb);
@@ -31,6 +33,7 @@ public class Nopeople extends AppCompatActivity {
         webSettings.setUseWideViewPort(true);
         //carga la Url
         miVisorWeb.loadUrl("https://thispersondoesnotexist.com");
+        openMain2();
 /*
         WebView mycontext = (WebView) findViewById(R.id.vistaweb);
         // swipeLayout.setOnRefreshListener(mOnRefreshListener);
@@ -46,7 +49,7 @@ public class Nopeople extends AppCompatActivity {
         @Override
         public void onRefresh() {
             // MUESTRA UN TOAST CON UN MENSAJE
-            Toast toast = Toast.makeText(Nopeople.this, "Hi there! I dont exist :", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(Nopeople.this, "Imagenes aleatrorias", Toast.LENGTH_LONG);
             toast.show();
             // RECARGA LA PÁGINA EN WebView
             miVisorWeb.reload();
@@ -54,4 +57,8 @@ public class Nopeople extends AppCompatActivity {
             miSwipe.setRefreshing(false);
         }
     };
+    private void openMain2(){
+        Intent intent = new Intent(Nopeople.this, MainActivity.class);
+        startActivity(intent);
+    }
 }

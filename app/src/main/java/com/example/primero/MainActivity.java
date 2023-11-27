@@ -19,13 +19,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-    //  seleccion(R.id.like1, R.id.usuario1, R.id.txt1, R.raw.hmm);
+        openNopeople();
+  //   seleccion(R.id.like1, R.id.usuario1, R.id.txt1, R.raw.hmm);
 
     }
     private void openNopeople(){
         Intent intent = new Intent(MainActivity.this, Nopeople.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
+
     }
 /*
     private void seleccion(int i, int usId, int txtId, final int animacionId){
@@ -76,6 +79,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return !like;
     }
-*/
 
+*/
 }
