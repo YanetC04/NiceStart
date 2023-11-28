@@ -18,19 +18,17 @@
             android:layout_height="wrap_content"
             android:id="@+id/vistaweb"
             >
-            <Button
-                android:id="@+id/atras"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="openMain2"
-                app:icon="@drawable/hacia_atras"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+            <ImageButton
+                android:id="@+id/adelante"
+                android:layout_width="60dp"
+                android:layout_height="38dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/izquierda"
+                android:onClick="openMainA"
+
                 />
         </WebView>
-
 
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,84 +1,67 @@
 package com.example.primero;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.animation.Animator;
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-
 import com.airbnb.lottie.LottieAnimationView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final int NUMERO_LIKES = 3; // Actualiza con el número de elementos
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        openNopeople();
-  //   seleccion(R.id.like1, R.id.usuario1, R.id.txt1, R.raw.hmm);
 
-    }
-    private void openNopeople(){
-        Intent intent = new Intent(MainActivity.this, Nopeople.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivity(intent);
+        LottieAnimationView[] likeaimagenes = {
+                findViewById(R.id.like1),
+                findViewById(R.id.like2),
+                findViewById(R.id.like3)
+        };
 
-    }
-/*
-    private void seleccion(int i, int usId, int txtId, final int animacionId){
-        final boolean[] like = {false};
-        final LottieAnimationView likeaimagen = findViewById(i);
-        final ImageView usuario = findViewById(usId);
-        final TextView txt =  findViewById(txtId);
+        int[] usuarioIds = {R.id.usuario1, R.id.usuario2, R.id.usuario3};
+        int[] txtIds = {R.id.txt1, R.id.txt2, R.id.txt3};
 
-        final LinearLayout l = findViewById(usId);
-        l.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                like[0] = animacion(likeaimagen, animacionId, like[0]);
-            }
-        });
+        // Configurar la interactividad de los corazones
+        seleccion(likeaimagenes, usuarioIds, txtIds, R.raw.hmm);
     }
 
-    private boolean animacion(final LottieAnimationView imagen, int ai, final boolean like){
-        if (!like){
-            imagen.setAnimation(ai);
-            imagen.playAnimation();
-        }else{
-            imagen.animate()
-                    .alpha(0f)
-                    .setDuration(200)
-                    .setListener(new Animator.AnimatorListener() {
-                        @Override
-                        public void onAnimationStart(@NonNull Animator animation) {
-                            imagen.setImageResource(R.drawable.corazon);
-                            imagen.setAlpha(1f);
-                        }
-
-                        @Override
-                        public void onAnimationEnd(@NonNull Animator animation) {
-
-                        }
-
-                        @Override
-                        public void onAnimationCancel(@NonNull Animator animation) {
-
-                        }
-
-                        @Override
-                        public void onAnimationRepeat(@NonNull Animator animation) {
-
-                        }
-                    });
+    private void seleccion(final LottieAnimationView[] likeaimagenes, final int[] usuarioIds, final int[] txtIds, final int animacionId) {
+        for (int i = 0; i < likeaimagenes.length; i++) {
+            final int currentIndex = i;
+            likeaimagenes[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    boolean nuevoEstado = (likeaimagenes[currentIndex].getTag() == null) || !(boolean) likeaimagenes[currentIndex].getTag();
+                    animacion(likeaimagenes[currentIndex], animacionId, nuevoEstado);
+                    likeaimagenes[currentIndex].setTag(nuevoEstado);
+                }
+            });
         }
-        return !like;
     }
 
-*/
+    private void animacion(final LottieAnimationView animacionView, int animacionId, final boolean like) {
+        // Verificar el estado actual (like/no like)
+        if (like) {
+            // Configurar y reproducir la animación de Lottie
+            animacionView.setAnimation(animacionId);
+            animacionView.playAnimation();
+        } else {
+            // Detener la animación y mostrar la imagen estática del corazón
+            animacionView.clearAnimation(); // Detener la animación actual
+            animacionView.setImageResource(R.drawable.corazon);
+        }
+    }
+
+    public void openNopeople(View v){
+        Intent intent = new Intent(MainActivity.this, Nopeople.class);
+        startActivity(intent);
+    }
+    public void openLogin2(View v){
+        Intent intent = new Intent(MainActivity.this, Login2.class);
+        startActivity(intent);
+    }
 }

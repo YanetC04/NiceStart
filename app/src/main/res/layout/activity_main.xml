@@ -30,6 +30,22 @@
 
     <!--- android:scrollbars : hace que lo esconda-->
 
+    <!--android:background="@android:color/transparent" hace que sea transparente el fondo-->
+
+    <ImageButton
+        android:id="@+id/atras"
+        android:layout_width="60dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="openLogin2"
+        android:scaleType="fitCenter"
+        android:src="@drawable/izquierda"
+        app:layout_constraintEnd_toStartOf="@id/primera"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
     <TextView
         android:id="@+id/primera"
         android:layout_width="wrap_content"
@@ -38,22 +54,23 @@
         android:text="Resientes"
         app:layout_constraintBottom_toTopOf="@id/scroll"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="@id/atras"
         app:layout_constraintTop_toBottomOf="@id/logo"
-        app:layout_constraintVertical_bias="0.41" />
+        app:layout_constraintVertical_bias="0.404" />
 
-    <Button
-        android:id="@+id/button3"
-        style="@style/buttonoutlined"
-        android:layout_width="108dp"
-        android:layout_height="54dp"
-        android:onClick="openNeopeple"
-        app:icon="@drawable/proximo"
-        app:layout_constraintBottom_toBottomOf="@id/primera"
+    <ImageButton
+        android:id="@+id/adelante"
+        android:layout_width="60dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="openNopeople"
+        android:scaleType="fitCenter"
+        android:src="@drawable/derecha"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.879"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toEndOf="@id/primera"
         app:layout_constraintTop_toBottomOf="@id/logo" />
 
     <HorizontalScrollView
@@ -222,5 +239,4 @@
         </LinearLayout>
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
