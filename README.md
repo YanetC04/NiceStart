@@ -17,6 +17,7 @@ Mi Signup
 ![Login2_activity](app/img/Register.PNG)
 # Main
 Al darle al boton de login mi Main se veria de esta menera
+
 ![Login2_activity](app/img/MainPNG.PNG)
 # Estructura Final
 Splash (es la parte principal de incio)
