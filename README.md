@@ -17,26 +17,34 @@ Mi Signup
 ![Login2_activity](app/img/Register.PNG)
 # Main
 Al darle al boton de login mi Main se veria de esta menera
+
 ![Login2_activity](app/img/MainPNG.PNG)
 # Estructura Final
 Splash (es la parte principal de incio)
 Cuenta con una animacion en el logo hace que se gire.
-Tambien tiene un periodo de tiempo  para que aparezca el  Login
-![Login2_activity](app/img/Splash.PNG)
- En el login se hizo unas modifciaciones
- se cambio a la chica
+Tambien tiene un periodo de tiempo  para que aparezca el  Login. 
+La URL para es -> https://github.com/YanetC04/NiceStart/blob/master/app/src/main/java/com/example/primero/Splash.java
+
+![Login2_activity](app/img/Splash.PNG) ->
+![Login2_activity](app/img/login2.PNG)
+ En el login se hizo unas modifciaciones se cambio a la chica.
  Luego cuando se le da a Login pasa a la pestaña a Main
+ 
  ![Login2_activity](app/img/MainPNG.PNG)
- Al MAin cuenta con animaciones de tipo LottieAnimationView  
+ Al Main cuenta con animaciones de tipo LottieAnimationView.
+ El enlace es https://github.com/YanetC04/NiceStart/blob/master/app/src/main/java/com/example/primero/MainActivity.java
  solo los corazones hace que si te gusta cambia a Like y si no te gusta te cambia a como estaba anteriormente.  
   Luego la parte de arriba cuenta con un scrool horizontal
   No se añadio para que se pueda escribir algun comentario o algo
   Aparecen flechas donde te permite ir hacia adelante o hacia atras
   si le das hacia adelante te llevara a Nopeoble
+  
   ![Login2_activity](app/img/Nopeople.PNG)
-  En este segmento te se añadio un swiperefresh y Toas que muestra un mensaje  
+  En este segmento te se añadio un swiperefresh y Toas que muestra un mensaje
+  El enlace es https://github.com/YanetC04/NiceStart/blob/master/app/src/main/java/com/example/primero/Nopeople.java
   Tambien hay una flecha que te permite volver atras.
   Si se vuelve a Login y se le da a SIGNUP
   En esta parte no se hizo cambios. Si se da a ok te vuelve al Login
+  
   ![Login2_activity](app/img/Register2.PNG)
 
