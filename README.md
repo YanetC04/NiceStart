@@ -30,6 +30,8 @@ La URL para es -> https://github.com/YanetC04/NiceStart/blob/master/app/src/main
  En el login se hizo unas modifciaciones se cambio a la chica.
  Luego cuando se le da a Login pasa a la pestaña a Main
  
+ ![Login2_activity](app/img/loginH.PNG)
+ La forma Horizontal se veria de esta manera
  ![Login2_activity](app/img/MainPNG.PNG)
  Al Main cuenta con animaciones de tipo LottieAnimationView.
  El enlace es https://github.com/YanetC04/NiceStart/blob/master/app/src/main/java/com/example/primero/MainActivity.java
@@ -47,4 +49,6 @@ La URL para es -> https://github.com/YanetC04/NiceStart/blob/master/app/src/main
   En esta parte no se hizo cambios. Si se da a ok te vuelve al Login
   
   ![Login2_activity](app/img/Register2.PNG)
+  La forma horizontal se veria de esta manera
+  ![Login2_activity](app/img/registerH.PNG)
 
