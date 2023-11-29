@@ -51,4 +51,4 @@ La URL para es -> https://github.com/YanetC04/NiceStart/blob/master/app/src/main
   ![Login2_activity](app/img/Register2.PNG)
   La forma horizontal se veria de esta manera
   ![Login2_activity](app/img/registerH.PNG)
-
+ Este es el linck que se hizo de forma horizontal https://github.com/YanetC04/NiceStart/tree/master/app/src/main/res/layout-land
